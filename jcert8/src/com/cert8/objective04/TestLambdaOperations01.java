@@ -1,4 +1,4 @@
-package com.sun.objetivo04;
+package com.cert8.objective04;
 
 import java.util.Comparator;
 import java.util.List;

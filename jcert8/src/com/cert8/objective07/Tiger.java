@@ -1,4 +1,4 @@
-package com.cert8.others;
+package com.cert8.objective07;
 
 @FunctionalInterface
 interface Sprint {
@@ -26,5 +26,3 @@ public class Tiger implements Sprint {
 	public void something(){System.out.println("something desde Tiger");}
 }
 
-class Animal {
-}

@@ -1,4 +1,4 @@
-package com.cert8.functionalinterfaces;
+package com.cert8.objective07;
 
 public class FindMatchingAnimals {
 	private static void print(Animal animal, CheckTrait trait) {
@@ -21,6 +21,7 @@ class Animal {
 	private boolean canHop;
 	private boolean canSwim;
 
+	public Animal(){}
 	public Animal(String speciesName, boolean hopper, boolean swimmer) {
 		species = speciesName;
 		canHop = hopper;

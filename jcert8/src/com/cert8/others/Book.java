@@ -9,6 +9,7 @@ public class Book implements Comparable<Book> {
 	protected String name;
 	protected LocalDate publishDate;
 	protected String author;
+	protected double price;
 	
 	private Book() {
 	}
@@ -18,13 +19,15 @@ public class Book implements Comparable<Book> {
 		this.name = builder.name;
 		this.publishDate = builder.publishDate;
 		this.author = builder.author;
+		this.price = builder.price;
 	}
 
-	public Book(int id, String name, LocalDate publishDate, String author) {
+	public Book(int id, String name, LocalDate publishDate, String author, double price) {
 		this.id = id;
 		this.name = name;
 		this.publishDate = publishDate;
 		this.author = author;
+		this.price = price;
 	}
 	
 	public int getId() {
@@ -55,11 +58,22 @@ public class Book implements Comparable<Book> {
 		return this.publishDate.getYear();
 	}
 	
+	
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+
 	public static class Builder {
 		protected int id;
 		protected String name;
 		protected LocalDate publishDate;
 		protected String author;
+		protected double price;
 
 		public Builder(){}
 		
@@ -79,6 +93,10 @@ public class Book implements Comparable<Book> {
 			this.author = author;
 			return this;
 		}
+		public Builder price(double price) {
+			this.price = price;
+			return this;
+		}
 
 		public Book build() {
 			return new Book(this);
@@ -86,7 +104,7 @@ public class Book implements Comparable<Book> {
 	}
 	
 	public static Book getInstance() {
-		return new Book(1000, "GG Marquez", LocalDate.of(1967,6,5), "100 años de Soledad");
+		return new Book(1000, "GG Marquez", LocalDate.of(1967,6,5), "100 años de Soledad", 100.00);
 	}
 	
 	public Book id(int id) {

@@ -1,4 +1,4 @@
-package com.cert8.functionalinterfaces;
+package com.cert8.objective07;
 
 import java.util.Date;
 
