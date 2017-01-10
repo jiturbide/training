@@ -22,7 +22,6 @@ public class TestCollectionOperations {
 		fromList.forEach(System.out::println);
 		System.out.println("-------------");
 		
-		List<>
 	}
 
 }
